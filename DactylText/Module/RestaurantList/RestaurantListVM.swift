@@ -15,7 +15,7 @@ final class RestaurantListVM: NSObject {
     
     private let dataService: DataService
     private let location: Location
-    public let coordinator: RestaurantListCoordinator
+    private let coordinator: RestaurantListCoordinator
     
     private var restaurantsList: [RestaurantModel]?
     

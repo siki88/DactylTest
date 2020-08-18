@@ -10,7 +10,7 @@ import UIKit
 
 class RestaurantListCoordinator {
 
-    var navigationController: UINavigationController
+    let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
