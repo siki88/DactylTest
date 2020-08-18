@@ -1,0 +1,39 @@
+PODS:
+  - Alamofire (5.2.2)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - Realm (5.3.4):
+    - Realm/Headers (= 5.3.4)
+  - Realm/Headers (5.3.4)
+  - RealmSwift (5.3.4):
+    - Realm (= 5.3.4)
+  - SnapKit (5.0.1)
+  - SwiftyStarRatingView (1.0.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2.2)
+  - AlamofireImage (~> 4.1.0)
+  - RealmSwift (~> 5.3.4)
+  - SnapKit (~> 5.0.1)
+  - SwiftyStarRatingView (~> 1.0.4)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - Realm
+    - RealmSwift
+    - SnapKit
+    - SwiftyStarRatingView
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  Realm: 4dd457b6ed025041cf7efe05dae78c027ba842e0
+  RealmSwift: 233af88fffe05ed7f9305eecef100d477c0c2c42
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyStarRatingView: a2b0057700e0adeb8e7442c55d99cb53b531d2f4
+
+PODFILE CHECKSUM: 29b85737ac1348744e027aadb8de31086739c8ac
+
+COCOAPODS: 1.9.0

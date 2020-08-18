@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1721B45724EBB1F6002435F8 /* RestaurantListModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721B45624EBB1F6002435F8 /* RestaurantListModelRealm.swift */; };
+		1721B45924EBC60B002435F8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721B45824EBC60B002435F8 /* Network.swift */; };
+		1721B45C24EBDC13002435F8 /* RestaurantListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721B45B24EBDC13002435F8 /* RestaurantListCoordinator.swift */; };
+		17B9159324E91D0D00D08B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9159224E91D0D00D08B95 /* AppDelegate.swift */; };
+		17B9159524E91D0D00D08B95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B9159424E91D0D00D08B95 /* SceneDelegate.swift */; };
+		17B9159C24E91D1100D08B95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B9159B24E91D1100D08B95 /* Assets.xcassets */; };
+		17B9159F24E91D1100D08B95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B9159D24E91D1100D08B95 /* LaunchScreen.storyboard */; };
+		17B915AE24E92EC600D08B95 /* RestaurantListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915AD24E92EC600D08B95 /* RestaurantListVC.swift */; };
+		17B915B024E92F6F00D08B95 /* RestaurantListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915AF24E92F6F00D08B95 /* RestaurantListVM.swift */; };
+		17B915B224E934D300D08B95 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915B124E934D300D08B95 /* DataService.swift */; };
+		17B915B624E93D9900D08B95 /* RestaurantListTableViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915B524E93D9900D08B95 /* RestaurantListTableViewListCell.swift */; };
+		17B915B824E9407900D08B95 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915B724E9407900D08B95 /* Navigation.swift */; };
+		17B915BA24E9478600D08B95 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915B924E9478600D08B95 /* Global.swift */; };
+		17B915BC24E9483A00D08B95 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915BB24E9483A00D08B95 /* Controller.swift */; };
+		17B915BE24E94D1A00D08B95 /* RestaurantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915BD24E94D1A00D08B95 /* RestaurantDetailVC.swift */; };
+		17B915C024E9625E00D08B95 /* RestaurantListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915BF24E9625E00D08B95 /* RestaurantListModel.swift */; };
+		17B915C224E972D800D08B95 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915C124E972D800D08B95 /* Location.swift */; };
+		17B915C424EA81CF00D08B95 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915C324EA81CF00D08B95 /* View.swift */; };
+		17B915C624EAD1DD00D08B95 /* RestaurantDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915C524EAD1DD00D08B95 /* RestaurantDetailVM.swift */; };
+		17B915C824EADDDF00D08B95 /* RestaurantDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915C724EADDDF00D08B95 /* RestaurantDetailModel.swift */; };
+		17B915CA24EAE6BA00D08B95 /* RestaurantDetailMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B915C924EAE6BA00D08B95 /* RestaurantDetailMenuTableViewCell.swift */; };
+		629A82BCDBBDF7DD7D884BB0 /* Pods_DactylText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DC84C82E42D6A4E81A02E4 /* Pods_DactylText.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1721B45624EBB1F6002435F8 /* RestaurantListModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListModelRealm.swift; sourceTree = "<group>"; };
+		1721B45824EBC60B002435F8 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		1721B45B24EBDC13002435F8 /* RestaurantListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListCoordinator.swift; sourceTree = "<group>"; };
+		179FFB1E5132EAD2645F6FCA /* Pods-DactylText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DactylText.release.xcconfig"; path = "Target Support Files/Pods-DactylText/Pods-DactylText.release.xcconfig"; sourceTree = "<group>"; };
+		17B9158F24E91D0D00D08B95 /* DactylText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DactylText.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B9159224E91D0D00D08B95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17B9159424E91D0D00D08B95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		17B9159B24E91D1100D08B95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17B9159E24E91D1100D08B95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17B915A024E91D1100D08B95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B915AD24E92EC600D08B95 /* RestaurantListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListVC.swift; sourceTree = "<group>"; };
+		17B915AF24E92F6F00D08B95 /* RestaurantListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListVM.swift; sourceTree = "<group>"; };
+		17B915B124E934D300D08B95 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		17B915B524E93D9900D08B95 /* RestaurantListTableViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListTableViewListCell.swift; sourceTree = "<group>"; };
+		17B915B724E9407900D08B95 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		17B915B924E9478600D08B95 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		17B915BB24E9483A00D08B95 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		17B915BD24E94D1A00D08B95 /* RestaurantDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailVC.swift; sourceTree = "<group>"; };
+		17B915BF24E9625E00D08B95 /* RestaurantListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListModel.swift; sourceTree = "<group>"; };
+		17B915C124E972D800D08B95 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		17B915C324EA81CF00D08B95 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		17B915C524EAD1DD00D08B95 /* RestaurantDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailVM.swift; sourceTree = "<group>"; };
+		17B915C724EADDDF00D08B95 /* RestaurantDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailModel.swift; sourceTree = "<group>"; };
+		17B915C924EAE6BA00D08B95 /* RestaurantDetailMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMenuTableViewCell.swift; sourceTree = "<group>"; };
+		380339BCF5536474AC7C1136 /* Pods-DactylText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DactylText.debug.xcconfig"; path = "Target Support Files/Pods-DactylText/Pods-DactylText.debug.xcconfig"; sourceTree = "<group>"; };
+		D8DC84C82E42D6A4E81A02E4 /* Pods_DactylText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DactylText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17B9158C24E91D0D00D08B95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629A82BCDBBDF7DD7D884BB0 /* Pods_DactylText.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17B9158624E91D0D00D08B95 = {
+			isa = PBXGroup;
+			children = (
+				17B9159124E91D0D00D08B95 /* DactylText */,
+				17B9159024E91D0D00D08B95 /* Products */,
+				F95C7AECEAB4B596D5E14AAC /* Pods */,
+				AF88909764475E4845544425 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		17B9159024E91D0D00D08B95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17B9158F24E91D0D00D08B95 /* DactylText.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17B9159124E91D0D00D08B95 /* DactylText */ = {
+			isa = PBXGroup;
+			children = (
+				17B915A624E92A4D00D08B95 /* Utility */,
+				17B915A724E92A5600D08B95 /* Extensions */,
+				17B915A824E92BAC00D08B95 /* Services */,
+				17B915A924E92BB600D08B95 /* Model */,
+				17B915AA24E92BBD00D08B95 /* Module */,
+				17B9159224E91D0D00D08B95 /* AppDelegate.swift */,
+				17B9159424E91D0D00D08B95 /* SceneDelegate.swift */,
+				17B9159B24E91D1100D08B95 /* Assets.xcassets */,
+				17B9159D24E91D1100D08B95 /* LaunchScreen.storyboard */,
+				17B915A024E91D1100D08B95 /* Info.plist */,
+			);
+			path = DactylText;
+			sourceTree = "<group>";
+		};
+		17B915A624E92A4D00D08B95 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		17B915A724E92A5600D08B95 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17B915B924E9478600D08B95 /* Global.swift */,
+				17B915B724E9407900D08B95 /* Navigation.swift */,
+				17B915C324EA81CF00D08B95 /* View.swift */,
+				17B915BB24E9483A00D08B95 /* Controller.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		17B915A824E92BAC00D08B95 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				17B915B124E934D300D08B95 /* DataService.swift */,
+				17B915C124E972D800D08B95 /* Location.swift */,
+				1721B45824EBC60B002435F8 /* Network.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		17B915A924E92BB600D08B95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		17B915AA24E92BBD00D08B95 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				17B915AB24E92BE200D08B95 /* RestaurantList */,
+				17B915AC24E92BEE00D08B95 /* RestaurantDetail */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		17B915AB24E92BE200D08B95 /* RestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				17B915B524E93D9900D08B95 /* RestaurantListTableViewListCell.swift */,
+				17B915AD24E92EC600D08B95 /* RestaurantListVC.swift */,
+				17B915AF24E92F6F00D08B95 /* RestaurantListVM.swift */,
+				17B915BF24E9625E00D08B95 /* RestaurantListModel.swift */,
+				1721B45624EBB1F6002435F8 /* RestaurantListModelRealm.swift */,
+				1721B45B24EBDC13002435F8 /* RestaurantListCoordinator.swift */,
+			);
+			path = RestaurantList;
+			sourceTree = "<group>";
+		};
+		17B915AC24E92BEE00D08B95 /* RestaurantDetail */ = {
+			isa = PBXGroup;
+			children = (
+				17B915BD24E94D1A00D08B95 /* RestaurantDetailVC.swift */,
+				17B915C524EAD1DD00D08B95 /* RestaurantDetailVM.swift */,
+				17B915C724EADDDF00D08B95 /* RestaurantDetailModel.swift */,
+				17B915C924EAE6BA00D08B95 /* RestaurantDetailMenuTableViewCell.swift */,
+			);
+			path = RestaurantDetail;
+			sourceTree = "<group>";
+		};
+		AF88909764475E4845544425 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8DC84C82E42D6A4E81A02E4 /* Pods_DactylText.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F95C7AECEAB4B596D5E14AAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				380339BCF5536474AC7C1136 /* Pods-DactylText.debug.xcconfig */,
+				179FFB1E5132EAD2645F6FCA /* Pods-DactylText.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17B9158E24E91D0D00D08B95 /* DactylText */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17B915A324E91D1100D08B95 /* Build configuration list for PBXNativeTarget "DactylText" */;
+			buildPhases = (
+				00ED9DFF26E5DFDCB8397053 /* [CP] Check Pods Manifest.lock */,
+				17B9158B24E91D0D00D08B95 /* Sources */,
+				17B9158C24E91D0D00D08B95 /* Frameworks */,
+				17B9158D24E91D0D00D08B95 /* Resources */,
+				920CB2B807C0063893E1A977 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DactylText;
+			productName = DactylText;
+			productReference = 17B9158F24E91D0D00D08B95 /* DactylText.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17B9158724E91D0D00D08B95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = cz.sikisoft.DactylText;
+				TargetAttributes = {
+					17B9158E24E91D0D00D08B95 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 17B9158A24E91D0D00D08B95 /* Build configuration list for PBXProject "DactylText" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17B9158624E91D0D00D08B95;
+			productRefGroup = 17B9159024E91D0D00D08B95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17B9158E24E91D0D00D08B95 /* DactylText */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17B9158D24E91D0D00D08B95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B9159F24E91D1100D08B95 /* LaunchScreen.storyboard in Resources */,
+				17B9159C24E91D1100D08B95 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00ED9DFF26E5DFDCB8397053 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DactylText-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		920CB2B807C0063893E1A977 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DactylText/Pods-DactylText-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DactylText/Pods-DactylText-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DactylText/Pods-DactylText-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17B9158B24E91D0D00D08B95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B915B024E92F6F00D08B95 /* RestaurantListVM.swift in Sources */,
+				17B915CA24EAE6BA00D08B95 /* RestaurantDetailMenuTableViewCell.swift in Sources */,
+				17B915B624E93D9900D08B95 /* RestaurantListTableViewListCell.swift in Sources */,
+				17B915C024E9625E00D08B95 /* RestaurantListModel.swift in Sources */,
+				17B915C824EADDDF00D08B95 /* RestaurantDetailModel.swift in Sources */,
+				17B915AE24E92EC600D08B95 /* RestaurantListVC.swift in Sources */,
+				1721B45724EBB1F6002435F8 /* RestaurantListModelRealm.swift in Sources */,
+				17B915B824E9407900D08B95 /* Navigation.swift in Sources */,
+				1721B45C24EBDC13002435F8 /* RestaurantListCoordinator.swift in Sources */,
+				17B915C224E972D800D08B95 /* Location.swift in Sources */,
+				17B915C624EAD1DD00D08B95 /* RestaurantDetailVM.swift in Sources */,
+				17B915BC24E9483A00D08B95 /* Controller.swift in Sources */,
+				1721B45924EBC60B002435F8 /* Network.swift in Sources */,
+				17B915B224E934D300D08B95 /* DataService.swift in Sources */,
+				17B9159324E91D0D00D08B95 /* AppDelegate.swift in Sources */,
+				17B915BE24E94D1A00D08B95 /* RestaurantDetailVC.swift in Sources */,
+				17B9159524E91D0D00D08B95 /* SceneDelegate.swift in Sources */,
+				17B915C424EA81CF00D08B95 /* View.swift in Sources */,
+				17B915BA24E9478600D08B95 /* Global.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17B9159D24E91D1100D08B95 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17B9159E24E91D1100D08B95 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17B915A124E91D1100D08B95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17B915A224E91D1100D08B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17B915A424E91D1100D08B95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 380339BCF5536474AC7C1136 /* Pods-DactylText.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55WW8Z3F86;
+				INFOPLIST_FILE = DactylText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.sikisoft.DactylText;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		17B915A524E91D1100D08B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 179FFB1E5132EAD2645F6FCA /* Pods-DactylText.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55WW8Z3F86;
+				INFOPLIST_FILE = DactylText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.sikisoft.DactylText;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17B9158A24E91D0D00D08B95 /* Build configuration list for PBXProject "DactylText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17B915A124E91D1100D08B95 /* Debug */,
+				17B915A224E91D1100D08B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17B915A324E91D1100D08B95 /* Build configuration list for PBXNativeTarget "DactylText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17B915A424E91D1100D08B95 /* Debug */,
+				17B915A524E91D1100D08B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17B9158724E91D0D00D08B95 /* Project object */;
+}
