@@ -22,7 +22,7 @@ extension UIFont {
 }
 
 extension UIColor {
-    static var mainColor = UIColor.red
+    static var mainColor = UIColor(red: 218/255, green: 055/255, blue: 050/255, alpha: 1.0)
     static var mainTextColor = UIColor.black
     static var backgroundColorWhite = UIColor.white
 }

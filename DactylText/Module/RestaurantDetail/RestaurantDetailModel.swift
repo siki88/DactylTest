@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct RestaurantDetailMenu: Decodable {
+struct RestaurantDetailMenu: Decodable & Codable {
     var dailyMenus: [RestaurantDailyMenus]?
     var status: String?
     
@@ -18,7 +18,7 @@ struct RestaurantDetailMenu: Decodable {
     }
 }
 
-struct RestaurantDailyMenus: Decodable {
+struct RestaurantDailyMenus: Decodable & Codable {
     var dailyMenu: RestaurantDailyMenu?
 
     enum CodingKeys: String, CodingKey {
@@ -26,7 +26,7 @@ struct RestaurantDailyMenus: Decodable {
     }
 }
 
-struct RestaurantDailyMenu: Decodable {
+struct RestaurantDailyMenu: Decodable & Codable {
     var dailyMenuId: String?
     var startDate: String?
     var endDate: String?
@@ -42,7 +42,7 @@ struct RestaurantDailyMenu: Decodable {
     }
 }
 
-struct RestaurantDailyMenuDishes: Decodable {
+struct RestaurantDailyMenuDishes: Decodable & Codable {
     var dish: RestaurantDailyMenuDish?
 
     enum CodingKeys: String, CodingKey {
@@ -50,7 +50,7 @@ struct RestaurantDailyMenuDishes: Decodable {
     }
 }
 
-struct RestaurantDailyMenuDish: Decodable {
+struct RestaurantDailyMenuDish: Decodable & Codable {
     var dishId: String?
     var name: String?
     var price: String?

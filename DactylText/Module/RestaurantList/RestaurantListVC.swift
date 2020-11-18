@@ -98,7 +98,7 @@ class RestaurantListVC: UIViewController {
         viewModel.updateTableView = { [weak self] (status) in
             DispatchQueue.main.async {
                 guard let self = self else { return }
-                self.view.hideCustomActivityIndicator()
+                //self.view.hideCustomActivityIndicator()
                 if status {
                     self.tableView.reloadData()
                     if self.viewModel.getFetchingMore() {
@@ -110,7 +110,7 @@ class RestaurantListVC: UIViewController {
     }
     
     private func fetchDataServiceRestaurantList() {
-        view.showCustomActivityIndicator()
+        //view.showCustomActivityIndicator()
         DispatchQueue.global(qos: .userInitiated).async {
             self.viewModel.fetchDataServiceRestaurantList(searchText: nil)
         }

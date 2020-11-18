@@ -110,32 +110,29 @@ extension RestaurantListVM {
             getParameter += "&lat=\(latitude)"
             getParameter += "&lon=\(longitude)"
         }
-
-        dataService.listRequest(urlParameter: urlParameter, getParameter: getParameter, postParameter: nil) { (response, error) in
-            if let error = error {
-                debugPrint("error: ",error)
-
-                if !self.getRealmData().isEmpty {
-                    self.restaurantsList = self.getRealmData()
-                    self.updateTableView?(true)
+        
+        dataService.sendRequestUniversal(urlParameter: urlParameter, getParameter: getParameter, postParameter: nil, RestaurantListModel.self) { [weak self] (response) in
+            guard let self = self else { return }
+            if let restaurantsList = response.restaurants, !restaurantsList.isEmpty {
+                if self.restaurantsList == nil {
+                    self.restaurantsList = restaurantsList
                 } else {
-                    self.updateTableView?(false)
+                    self.restaurantsList?.append(contentsOf: restaurantsList)
                 }
+                
+                DispatchQueue.global(qos: .utility).async {
+                    self.setRealmData(restaurantsList: restaurantsList)
+                }
+                
+                self.updateTableView?(true)
             }
-            if let response = response {
-                if let restaurantsList = response.restaurants, !restaurantsList.isEmpty {
-                    if self.restaurantsList == nil {
-                        self.restaurantsList = restaurantsList
-                    } else {
-                        self.restaurantsList?.append(contentsOf: restaurantsList)
-                    }
-                    
-                    DispatchQueue.global(qos: .utility).async {
-                        self.setRealmData(restaurantsList: restaurantsList)
-                    }
-                    
-                    self.updateTableView?(true)
-                }
+        } failHandler: { [weak self] (error) in
+            guard let self = self else { return }
+            if !self.getRealmData().isEmpty {
+                self.restaurantsList = self.getRealmData()
+                self.updateTableView?(true)
+            } else {
+                self.updateTableView?(false)
             }
         }
     }

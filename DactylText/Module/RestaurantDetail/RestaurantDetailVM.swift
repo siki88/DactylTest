@@ -67,20 +67,18 @@ extension RestaurantDetailVM {
         var getParameter: String = ""
         getParameter += "?res_id=\(restaurantId)"
         
-        dataService.menuRequest(urlParameter: urlParameter, getParameter: getParameter, postParameter: nil) { (response, error) in
-            if let error = error {
-                debugPrint("error: ",error)
+        dataService.sendRequestUniversal(urlParameter: urlParameter, getParameter: getParameter, postParameter: nil, RestaurantDetailMenu.self) { [weak self] (response) in
+            guard let self = self else { return }
+            if let restaurantDetailMenus = response.dailyMenus, !restaurantDetailMenus.isEmpty {
+                self.restaurantDetailMenus.append(contentsOf: restaurantDetailMenus)
+                self.updateTableView?(true)
+            } else {
                 self.updateTableView?(false)
             }
-            if let response = response {
-                debugPrint("response: ",response)
-                if let restaurantDetailMenus = response.dailyMenus, !restaurantDetailMenus.isEmpty {
-                    self.restaurantDetailMenus.append(contentsOf: restaurantDetailMenus)
-                    self.updateTableView?(true)
-                } else {
-                    self.updateTableView?(false)
-                }
-            }
+        } failHandler: { [weak self] (error) in
+            guard let self = self else { return }
+            debugPrint("error: ",error)
+            self.updateTableView?(false)
         }
     }
 }

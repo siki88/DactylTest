@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct RestaurantListModel: Decodable {
+struct RestaurantListModel: Decodable & Codable {
     var resultsFound: Int?
     var resultsStart: Int?
     var resultsShown: Int?
@@ -22,7 +22,7 @@ struct RestaurantListModel: Decodable {
     }
 }
 
-struct RestaurantModel: Decodable {
+struct RestaurantModel: Decodable & Codable {
     var restaurant: RestaurantItemModel?
     
     enum CodingKeys: String, CodingKey {
@@ -30,7 +30,7 @@ struct RestaurantModel: Decodable {
     }
 }
 
-struct RestaurantItemModel: Decodable {
+struct RestaurantItemModel: Decodable & Codable {
     var apiKey: String?
     var id: String?
     var name: String?
@@ -54,7 +54,7 @@ struct RestaurantItemModel: Decodable {
     }
 }
 
-struct RestaurantLocationModel: Decodable {
+struct RestaurantLocationModel: Decodable & Codable {
     var locality: String?
     var city: String?
     var latitude: String?
@@ -68,7 +68,7 @@ struct RestaurantLocationModel: Decodable {
     }
 }
 
-struct RestaurantRatingModel: Decodable {
+struct RestaurantRatingModel: Decodable & Codable {
     var aggregateRating: String?
     
     enum CodingKeys: String, CodingKey {
