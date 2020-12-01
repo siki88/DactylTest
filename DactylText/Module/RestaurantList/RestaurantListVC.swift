@@ -101,8 +101,8 @@ class RestaurantListVC: UIViewController {
                 //self.view.hideCustomActivityIndicator()
                 if status {
                     self.tableView.reloadData()
-                    if self.viewModel.getFetchingMore() {
-                        self.viewModel.setFetchingMore(false)
+                    if self.viewModel.fetchingMore {
+                        self.viewModel.fetchingMore = false
                     }
                 }
             }
@@ -135,7 +135,7 @@ extension RestaurantListVC {
 extension RestaurantListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getRestaurantsCount()
+        return viewModel.restaurantsList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -145,12 +145,12 @@ extension RestaurantListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantListCell") as? RestaurantListTableViewListCell else { return UITableViewCell() }
         //Implement to ViewModel
-        guard let item = viewModel.getRestaurantItem(indexPath.row) else { return UITableViewCell() }
+        guard let item = viewModel.restaurantItem(for: indexPath.row) else { return UITableViewCell() }
         //Implement to ViewModel
         cell.productNameLabel.text = item.name ?? ""
         cell.productDescriptionLabel.text = item.cuisines ?? ""
-        cell.productLocationLabel.text = viewModel.getRestaurantLocation(item.location)
-        cell.starRatingView.value = viewModel.getRestaurantRating(item.rating)
+        cell.productLocationLabel.text = viewModel.restaurantLocation(for: item.location)
+        cell.starRatingView.value = viewModel.restaurantRating(for: item.rating)
 
         self.viewModel.createImage(url: item.thumb) { [weak self] (image) in
             guard self != nil else { return }
@@ -163,7 +163,7 @@ extension RestaurantListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.redirectToRestaurantDetail(indexPath.row)
+        viewModel.redirectToRestaurantDetail(for: indexPath.row)
     }
 }
 
@@ -172,7 +172,7 @@ extension RestaurantListVC: UITableViewDelegate, UITableViewDataSource {
 extension RestaurantListVC: UISearchBarDelegate {
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        viewModel.setStartPage(0)
+        viewModel.startPage = 0
         searchBar.setShowsCancelButton(true, animated: true)
         return true
     }
@@ -193,7 +193,7 @@ extension RestaurantListVC: UISearchBarDelegate {
     }
     
     private func fetchDataServiceOnSearchBar(_ searchBar: UISearchBar) {
-        viewModel.removeRestaurantsList()
+        viewModel.restaurantsList = nil
         viewModel.fetchDataServiceRestaurantList(searchText: searchBar.text)
     }
 }

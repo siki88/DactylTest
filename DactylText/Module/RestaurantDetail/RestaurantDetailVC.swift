@@ -45,7 +45,7 @@ class RestaurantDetailVC: UIViewController {
     
     private func configureNavigation() {
         //set view
-        title = viewModel.getRestaurantDetail().name ?? ""
+        title = viewModel.restaurantDetail.name ?? ""
     }
     
     private func configureView() {
@@ -63,7 +63,7 @@ class RestaurantDetailVC: UIViewController {
         //set setting
         mapView.delegate = self
         
-        guard let location = viewModel.getLocationParameter() else { return }
+        guard let location = viewModel.locationParameter() else { return }
         let latitude: Double = location.latitude
         let longitude: Double = location.longitude
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -73,7 +73,7 @@ class RestaurantDetailVC: UIViewController {
         
         let pin = MKPointAnnotation()
         pin.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        pin.title = viewModel.getRestaurantDetail().name ?? ""
+        pin.title = viewModel.restaurantDetail.name ?? ""
         mapView.addAnnotation(pin)
     }
     
@@ -120,7 +120,7 @@ extension RestaurantDetailVC: MKMapViewDelegate {
 extension RestaurantDetailVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getRestaurantDailyMenusCount()
+        return viewModel.checkDishes().count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -133,8 +133,8 @@ extension RestaurantDetailVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantDetailMenuCell") as? RestaurantDetailMenuTableViewCell else { return UITableViewCell() }
-        cell.textLabel?.text = viewModel.getRestaurantDailyMenus(indexPathRow: indexPath.row).name ?? ""
-        cell.textLabel?.text? += " \(viewModel.getRestaurantDailyMenus(indexPathRow: indexPath.row).price ?? "")"
+        cell.textLabel?.text = viewModel.restaurantDailyMenus(for: indexPath.row).name ?? ""
+        cell.textLabel?.text? += " \(viewModel.restaurantDailyMenus(for: indexPath.row).price ?? "")"
         cell.textLabel?.numberOfLines = 2
         cell.textLabel?.font = UIFont.mainFont(ofSize: 14)
         return cell

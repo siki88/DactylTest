@@ -17,14 +17,30 @@ final class RestaurantListVM: NSObject {
     private let location: Location
     private let coordinator: RestaurantListCoordinator
     
-    private var restaurantsList: [RestaurantModel]?
-    
+    private var _restaurantsList: [RestaurantModel]?
+    public var restaurantsList: [RestaurantModel]? {
+        get {
+            return _restaurantsList
+        }
+        set(newValue) {
+            _restaurantsList = newValue
+        }
+    }
     // MARK: - Instance properties
     
     private let realDistance: String = "real_distance"
-    private var startPage: Int = 0
     private let countItemTableView: Int = 20
-    private var fetchingMore: Bool = false
+    public var startPage: Int = 0
+    
+    private var _fetchingMore: Bool = false
+    public var fetchingMore: Bool {
+        get {
+            return _fetchingMore
+        }
+        set(newValue) {
+            _fetchingMore = newValue
+        }
+    }
     
     // MARK: - Closures
     
@@ -43,51 +59,30 @@ final class RestaurantListVM: NSObject {
             }
         }
     }
-    
-    func removeRestaurantsList() {
-        self.restaurantsList = nil
-    }
-    
-    func getFetchingMore() -> Bool {
-        return fetchingMore
-    }
-    
-    func setFetchingMore(_ fetchingMore: Bool) {
-        self.fetchingMore = fetchingMore
-    }
-    
-    func setStartPage(_ startPage: Int) {
-        self.startPage = startPage
-    }
-    
-    func getRestaurantsCount() -> Int {
-        guard let restaurantsList = self.restaurantsList else { return 0 }
-        return restaurantsList.count
-    }
-    
-    func getRestaurantItem(_ indexPathRow: Int) -> RestaurantItemModel? {
+
+    public func restaurantItem(for index: Int) -> RestaurantItemModel? {
         guard let restaurantsList = self.restaurantsList,
-            let restaurant = restaurantsList[indexPathRow].restaurant
+            let restaurant = restaurantsList[index].restaurant
             else { return nil }
         return restaurant
     }
     
-    func getRestaurantLocation(_ location: RestaurantLocationModel?) -> String {
+    public func restaurantLocation(for location: RestaurantLocationModel?) -> String {
         guard let location = location else { return "" }
         guard let locality = location.locality else { return "" }
         guard let city = location.city else { return "\(locality)" }
         return "\(locality), \(city)"
     }
     
-    func getRestaurantRating(_ rating: RestaurantRatingModel?) -> CGFloat {
+    public func restaurantRating(for rating: RestaurantRatingModel?) -> CGFloat {
         guard let rating = rating else { return 0 }
         guard let aggregateRating = rating.aggregateRating else { return 0 }
         return CGFloat(aggregateRating.floatValue)
     }
     
-    func redirectToRestaurantDetail(_ indexPathRow: Int) {
-        let restaurantItem: RestaurantItemModel = getRestaurantItem(indexPathRow) ?? RestaurantItemModel()
-        coordinator.startRestaurantDetail(restaurantItemModel: restaurantItem)
+    public func redirectToRestaurantDetail(for index: Int) {
+        let restaurantItemModel: RestaurantItemModel = restaurantItem(for: index) ?? RestaurantItemModel()
+        coordinator.startRestaurantDetail(restaurantItemModel: restaurantItemModel)
     }
 }
 
